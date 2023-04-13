@@ -1,0 +1,444 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Nanum Gothic';
+}
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration:none;
+  font-size: 16px;
+}
+
+/* 헤더 */
+#wrap{
+  overflow-x: hidden;
+  width:100%;
+}
+#header{
+  width:80%;
+  height:30px;
+  margin:1% 10% 0 10%;
+}
+#logo{
+  width: 20%;
+  float:left;
+}
+.menu{
+  margin-top: 10px;
+  position: relative;
+  z-index: 5;
+}
+.menu a{
+  display: block;
+  text-decoration: none;
+}
+#header nav{
+  width: 70%;
+  float: right;
+}
+.menu>li{
+  float: left;
+  width: 250px;
+  height: 50px;
+  background-color: #ffffff;
+}
+.menu>li>a{
+  line-height: 50px;
+  text-align: center;
+  font-weight: bolder;
+  color: #000000;			
+}
+.menu>li:hover>a{
+  color: #FF9D00;
+}
+.submenu{
+  display: none; 
+}
+.submenu>li{
+  width: 250px;
+  height: 50px;
+  background-color: #ffc783;
+}
+.submenu>li>a{
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
+}
+.submenu>li:hover>a{
+  text-decoration: none;	
+  background-color: #ffffff;
+}
+
+/* 배너 */
+.banner{
+  width: 100%;
+  height: 300px;
+  float: left;
+  background: rgb(2, 0, 30);
+}
+.banner-text{
+  float: left;
+  color: #fff;
+  margin: 125px 0 0 10%
+}
+.banner-menu{
+  width: 100%;
+  height: 45px;
+  float: left;
+  border: 1px solid #ddd;
+}
+.banner-icon1{
+  width: 60px;
+  margin-left: 15%;
+  height: 44px;
+  float: left;
+  border: 1px solid #ddd;
+}
+.banner-icon2{
+  width: 15%;
+  height: 44px;
+  float: left;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+}
+#home-icon{
+  width: 100%;
+  height:100%;
+}
+#arrowdown-icon{
+  float: right;
+  width: 43px;
+  height: 43px;
+}
+.banner-icon2 h4{
+  float: left;
+  color: rgb(162, 160, 160);
+  font-weight: 200;
+  margin: 13px 0 0 10px;
+}
+.menubar{
+  width: 70%; 
+  background-color: #ddd; 
+  float:left; 
+  height: 60px; 
+  margin: 80px 15% 100px 15%;
+}
+.menubar-center{
+  width: 25%; 
+  float: left; 
+  height: 60px;
+  color: black;
+  border:none;
+}
+.menubar-center-orange{
+  width: 25%; 
+  float: left;
+  height: 100%;
+  border:none;
+  background-color: rgb(253, 182, 30);
+}
+.menubar-center h3{
+  color: rgb(0, 0, 0); 
+  font-size: 18px;
+}
+.menubar-center-orange h3{
+  color: rgb(255, 255, 255); 
+  font-size: 18px;
+}
+
+/* IR 미팅예약 */
+.reservation{
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  margin-left: 15%;
+  float:left;
+  height: 600px;
+}
+.subtitle{
+  float: left; 
+  border-top: 4px solid rgb(253, 182, 30); 
+  padding-top: 10px;
+}
+.subtitle h1{
+  margin:left; 
+  margin-top: 20px;
+}
+.subtitle-des{
+  margin-bottom: 70px;
+  font-weight: 300; 
+  width: 100%; 
+  float: left; 
+  margin-top: 20px
+}
+.login{
+  float: right;
+  border: 1px solid #000;
+  padding: 10px;
+  margin-top: 20px;
+}
+.login h4{
+  font-weight: 300;
+}
+.reservation-box{
+  border-top: 2px solid rgb(0, 0, 0);
+  width: 100%;
+  float:left;
+  height: 500px; 
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+.calendar-box{
+  margin-left: 7%;
+  float: left;
+  width: 40%;
+  background: rgb(255, 255, 255);
+  height: 500px"
+}
+.calendar{
+  width: 200px;
+  height: 40px;
+  margin-top: 40px;
+}
+#month{
+  float: left;
+  margin-bottom: -25px;
+  width: 100%;
+  margin-top: 0px;
+}
+#left-arrow{
+  width: 20px;
+  border: 1px solid #ddd;
+  float: left;
+}
+#text-w{
+  color: #ddd;
+}
+#text-b{
+  color: #000;
+}
+#right-arrow{
+  width: 20px;
+  border: 1px solid #000;
+  float: right;
+}
+.day-box{
+  text-align: center;
+  width: 100%; 
+  height: 330px;
+  margin-top: 20px; 
+  background:rgb(255, 255, 255)
+}
+#day-border{
+  border-bottom: 1px solid #ddd; 
+  margin-bottom: 20px; 
+  width: 100%; 
+  float: left;
+  height: 30px;
+}
+.day-week{
+  float: left; 
+  width: 14%
+}
+.day-box2{
+  width: 100%; 
+  float: left;
+  height: 60px;
+}
+.day{
+  float: left; 
+  width: 14%
+}
+.day-gray{
+  color: #ddd; 
+  float: left; 
+  width: 14%
+}
+.choose-day{
+  text-align: center;
+  height: 60px;
+  float: left; 
+  width: 14%
+}
+.choose-day2{
+  width: 20px; 
+  border-bottom: 2px solid #000;
+}
+#reserv-info{
+  float: right; 
+  margin: 20px;
+}
+.choose-box{
+  margin-left: 5%; 
+  float: left; 
+  width: 40%;  
+  height: 500px
+}
+.choose-info{
+  float: left; 
+  margin: 50px 0 0 20px;
+}
+.selected{
+  float: left; 
+  width: 100%; 
+  margin: 50px 0 0 20px;
+}
+#meeting{
+  float: left; 
+  margin: 50px 0 0 20px;
+}
+.meeting-time1{
+  width: 80%; 
+  float: left; 
+  border: 1px solid #000; 
+  padding: 10px; 
+  margin: 20px;
+}
+.meeting-time2{
+  width: 80%; 
+  float: left; 
+  border: 1px solid #000; 
+  padding: 10px; 
+  margin: 20px; 
+  margin-top: 0px;
+}
+.meeting-time3{
+  width: 80%; 
+  float: left; 
+  border: 1px solid #000; 
+  padding: 10px; 
+  margin: 20px; 
+  margin-top: 0px;
+}
+.time{
+  padding: 5px; 
+  text-align: center; 
+  font-weight: 300;
+}
+.meeting-method-box{
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-top: 2px solid rgb(0, 0, 0); 
+  width: 100%; 
+  float:left; 
+  height: 250px; 
+  padding-top: 50px; 
+  background-color: rgb(255, 255, 255); 
+  margin-top: 50px;
+}
+.meeting-method{
+  width: 28%; 
+  float: left; 
+  border: 1px solid #000; 
+  padding: 1%; 
+  margin: 1%;
+}
+.method-text{
+  padding: 5px; 
+  text-align: center; 
+  font-weight: 300;
+}
+.method-info{
+  width: 100%; 
+  float: left; 
+  margin: 20px;
+}
+.place-box{
+  width: 92.5%; 
+  float: left; 
+  border: 1px solid #000; 
+  padding: 10px; 
+  margin: 1%;
+}
+.place{
+  width: 10%; 
+  float: left; 
+  padding: 5px; 
+  font-weight: 300;
+}
+.place-box input{
+  width: 80%;
+  height: 30px;
+  float: left; 
+  border: 0px solid rgba(0, 0, 0, 0);
+}
+.complete-box{
+  float: left; 
+  width: 100%; 
+  margin-top: 20px;
+}
+.complete{
+  border-radius: 50px; 
+  width: 28%;  
+  background-color: #000; 
+  padding: 1%; 
+  margin: 1%;
+}
+.complete h4{
+  color: #fff; 
+  padding: 5px; 
+  text-align: center; 
+  font-weight: 300;
+}
+
+/* footer */
+.footer{
+  width:100%;
+  margin:0 auto;
+  margin-bottom: 50px;
+  margin-top: 800px;
+  float: left;
+}
+.footer .footer-first{
+  background-color: #FF9D00;
+  padding: 100px;
+  padding-left: 20%;
+}
+.footer .footer-first p{
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+}
+.footer .footer-second{
+  background-color: white;
+}
+.footer-second{
+	box-sizing: border-box;
+	width: 80%;
+	text-align: left;
+	font: bold 16px;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+}
+.footer-second .footer-left,
+.footer-second .footer-center,
+.footer-second .footer-right{
+	display: inline-block;
+	vertical-align: top;
+  line-height: 30px;
+}
+.footer-second .footer-left{
+	width: 33%;
+}
+.footer-second .footer-center{
+	width: 33%;
+}
+.footer-second .footer-center span{
+  margin-right: 30px;
+}
+.footer-second .footer-right{
+	width: 30%;
+  text-align: right;
+}
+.footer-second .footer-right img{
+  padding-right: 10px;
+}
+.footer a{
+  color: black;
+  text-decoration: none;
+}
