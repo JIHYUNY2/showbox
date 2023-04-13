@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>main_page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Single+Day&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/index.css">
+  <script>
+    jQuery(document).ready(function(){
+      $('.menu>li').mouseover(function(){
+        $(this).find('.submenu').stop().slideDown(500);
+      }).mouseout(function(){
+        $(this).find('.submenu').stop().slideUp(500);
+      });
+    });
+  </script>
+</head>
+<body>
+<!-- 헤더  -->
+<div id="wrap">
+  <div id="main_page">
+    <div id="header">
+      <h1 id="logo">
+        <a href="index.html"><img src="images/logo.jpg" alt="showbox_logo"></a>
+      </h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="sub-first.html">쇼박스 소개</a>
+            <ul class="submenu">
+              <li><a href="sub-first.html">쇼박스 소개</a></li>
+              <li><a href="sub-second.html">사업 영역</a></li>
+              <li><a href="sub-third.html">윤리경영</a></li>
+            </ul>
+          </li>
+          <li><a href="sub-fifth.html">라인업</a>
+            <ul class="submenu">
+              <li><a href="sub-fourth.html">개봉 예정작</a></li>
+              <li><a href="sub-fifth.html">쇼박스 라인업</a></li>
+            </ul>
+          </li>
+          <li><a href="sub-eight.html">IR</a>
+            <ul class="submenu">
+              <li><a href="sub-sixth.html">공시정보</a></li>
+              <li><a href="sub-seventh.html">재무정보</a></li>
+              <li><a href="sub-eight.html">IR뉴스</a></li>
+              <li><a href="sub-ninth.html">관리규정</a></li>
+            </ul>
+          </li>
+          <li><a href="sub-tenth.html">채용정보</a>
+            <ul class="submenu">
+              <li><a href="sub-tenth.html">채용정보</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 배너 -->
+  <div class="slider">
+    <img src="images/slide1.jpg" class="slide">
+    <img src="images/slide2.jpg" class="slide">
+    <div class="toggle">
+      <button class="active" data-slide="1"></button>
+      <button data-slide="2"></button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const toggleButtons = document.querySelectorAll('.toggle button');
+
+    let currentSlide = 0;
+
+    function showSlide(slideNumber) {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove('active');
+      toggleButtons[i].classList.remove('active');
+    }
+    slides[slideNumber].classList.add('active');
+    toggleButtons[slideNumber].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    showSlide(0);
+    for (let i = 0; i < toggleButtons.length; i++) {
+      toggleButtons[i].addEventListener('click', function() {
+        showSlide(Number(this.dataset.slide) - 1);
+        currentSlide = Number(this.dataset.slide) - 1;
+      });
+    }
+
+    const interval = setInterval(nextSlide, 3000);
+  </script>
+
+
+  <!-- 사업영역 -->
+    <div class="business">
+      <p class="title"><b>쇼박스 사업영역</b></p>
+      <p class="subtitle"><b>한국 영화 시장을 리드함은 물론, 사업의 폭을 넓혀 글로벌 역량을 키우고 있는 오리온 그룹 내 콘텐츠 스튜디오 입니다.</b></p>
+      <div class="button">
+        <button class="btn btn-detail" onclick="location.href='sub-first.html'" type="button">자세히보기</button>
+      </div>
+      <div class="business_list">
+        <div class="first">
+          <h4>제작/투자</h4>
+          <img src="images/list1.jpg">
+          <p>영화 투자를 계획하고  제작관리를<br> 
+            실행합니다.</p>
+        </div>
+        <div class="second">
+          <h4>국내/해외 배급</h4>
+          <img src="images/list2.jpg">
+          <p>전국 2,937여개의 스크린에 영화를<br> 
+            공급하며 디지털 VOD를 제공합니다.</p>
+        </div>
+        <div class="third">
+          <h4>홍보/마켓팅</h4>
+          <img src="images/list3.jpg">
+          <p>선호도를 높이기 위해 다양한 <br>
+            홍보/마켓팅 활동을 진행합니다.</p>
+        </div>
+        <div class="fourth">
+          <h4>해외 상영관 사업</h4>
+          <img src="images/list4.jpg">
+          <p>중국 북경 상영관, 심양 상영관을 <br>
+            운영하고 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 현재 상영작 & 상영 예정작  -->
+    <div class="screening-background">
+      <div class="screening">
+        <p class="title"><b>현재 상영작 & 상영 예정작</b></p>
+        <p class="subtitle"><b> 과감한 기획과 창조적 시도를 가능케하는 안정적 파트너십으로 창작자에게는 믿음직한 제작 기반과 서비스를, 관객에게는 최고의 즐거움을 선사합니다.</b></p>
+        <div id="divSB" class="screening-box">
+          <div class="screening-info-first">
+            <p class="small-movie"><b>movie</b></p>
+            <p class="screening-name"><b>압꾸정</b></p>
+            <p class="screening-info-a"><b>감독</b>&nbsp&nbsp임진순&nbsp&nbsp&nbsp&nbsp<b>출연</b>&nbsp&nbsp마동석,정경호,오나라,최병모,오연서</p>
+            <p class="screening-info-b"><b>등급</b>&nbsp&nbsp12세 관람가&nbsp&nbsp<b>장르</b>&nbsp&nbsp코미디,드라마</p>
+            <div class="button-more">
+              <button class="btn btn-detail" onclick="location.href='sub-thirteen.html'" type="button">MORE</button><br>
+            </div>
+          </div>
+          <div onclick="divSBController(1)" class="screening-info-second">
+            <p class="screening-name"><b>사흘</b></p>
+          </div>
+          <div onclick="divSBController(2)" class="screening-info-third">
+            <p class="screening-name"><b>스즈메의 문단속</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class ="rotate">
+      <canvas class="canvas1" id="myCanvas" width="900" height="300"></canvas>
+      <div id="imgRotation">
+        <img id ="rotate-img1" src="images/rotate1.jpg">
+        <img id ="rotate-img2" src="images/rotate2.jpg">
+        <img id ="rotate-img3" src="images/rotate3.jpg">
+      </div>
+    </div>
+
+    <script>   
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(150, 150, canvas.height / 2, 0, 2 * Math.PI);
+    ctx.strokeStyle = "gray";
+    ctx.stroke();
+
+    function divSBController(n)
+    {
+      if(n == 0)
+      {
+        $("#imgRotation")
+        .html('<img style="border-radius: 50%;margin-top: -500px;margin-right: 400px;float: right;width: 450px; height: 450px" src="images/rotate1.jpg">\
+        <img style="border-radius: 50%;margin-top: -250px;margin-right: -150px;float: right;width: 450px; height: 450px" src="images/rotate2.jpg">\
+        <img style="border-radius: 50%;margin-top: -800px;margin-right: -400px;float: right;width: 450px; height: 450px" src="images/rotate3.jpg">')
+        $("#divSB")
+        .html('\
+        <div class="screening-info-first">\
+        <p class="small-movie"><b>movie</b></p>\
+        <p class="screening-name"><b>압꾸정</b></p>\
+        <p class="screening-info-a"><b>감독</b>&nbsp&nbsp임진순&nbsp&nbsp&nbsp&nbsp<b>출연</b>&nbsp&nbsp마동석,정경호,오나라,최병모,오연서</p>\
+        <p class="screening-info-b"><b>등급</b>&nbsp&nbsp12세 관람가&nbsp&nbsp<b>장르</b>&nbsp&nbsp코미디,드라마</p>\
+        <div class="button-more">\
+          <button class="btn btn-detail" type="button">MORE</button><br>\
+        </div>\
+        </div>\
+        <div onclick="divSBController(1)" class="screening-info-second">\
+          <p class="screening-name"><b>사흘</b></p>\
+        </div>\
+        <div onclick="divSBController(2)" class="screening-info-third">\
+          <p class="screening-name"><b>스즈메의 문단속</b></p>\
+        </div>')
+        }
+        if(n == 1)
+        {
+          $("#imgRotation")
+          .html('<img style="border-radius: 50%;margin-top: -500px;margin-right: 400px;float: right;width: 450px; height: 450px" src="images/rotate2.jpg">\
+          <img style="border-radius: 50%;margin-top: -250px;margin-right: -150px;float: right;width: 450px; height: 450px" src="images/rotate3.jpg">\
+          <img style="border-radius: 50%;margin-top: -800px;margin-right: -400px;float: right;width: 450px; height: 450px" src="images/rotate1.jpg">\
+          ')
+          $("#divSB").html('\
+          <div onclick="divSBController(0)" class="screening-info-second">\
+            <p class="screening-name"><b>압꾸정</b></p>\
+          </div>\
+          <div class="screening-info-first">\
+            <p class="small-movie"><b>movie</b></p>\
+            <p class="screening-name"><b>사흘</b></p>\
+            <p class="screening-info-a"><b>감독</b>&nbsp&nbsp현문섭&nbsp&nbsp&nbsp&nbsp<b>출연</b>&nbsp&nbsp박신양, 이민기, 이레</p>\
+            <p class="screening-info-b"><b>등급</b>&nbsp&nbsp12세 관람가&nbsp&nbsp<b>장르</b>&nbsp&nbsp미스터리</p>\
+            <div class="button-more">\
+              <button class="btn btn-detail" type="button">MORE</button><br>\
+            </div>\
+          </div>\
+          <div onclick="divSBController(2)" class="screening-info-third">\
+            <p class="screening-name"><b>스즈메의 문단속</b></p>\
+          </div>\
+        </div>')
+        }
+        if(n == 2)
+        {
+          $("#imgRotation")
+          .html('<img style="border-radius: 50%;margin-top: -500px;margin-right: 400px;float: right;width: 450px; height: 450px" src="images/rotate3.jpg">\
+          <img style="border-radius: 50%;margin-top: -250px;margin-right: -150px;float: right;width: 450px; height: 450px" src="images/rotate1.jpg">\
+          <img style="border-radius: 50%;margin-top: -800px;margin-right: -400px;float: right;width: 450px; height: 450px" src="images/rotate2.jpg">\
+          ')
+          $("#divSB").html('\
+          <div onclick="divSBController(0)" class="screening-info-third">\
+            <p class="screening-name"><b>압꾸정</b></p>\
+          </div>\
+          <div onclick="divSBController(1)" class="screening-info-second">\
+            <p class="screening-name"><b>사흘</b></p>\
+          </div>\
+          <div class="screening-info-first">\
+            <p class="small-movie"><b>movie</b></p>\
+            <p class="screening-name"><b>스즈메의 문단속</b></p>\
+            <p class="screening-info-a"><b>감독</b>&nbsp&nbsp신카이 마코토&nbsp&nbsp&nbsp&nbsp<b>출연</b>&nbsp&nbsp탄지 타쿠미, 마사요시 티나카</p>\
+            <p class="screening-info-b"><b>등급</b>&nbsp&nbsp12세 관람가&nbsp&nbsp<b>장르</b>&nbsp&nbsp애니메이션</p>\
+            <div class="button-more">\
+              <button class="btn btn-detail" type="button">MORE</button><br>\
+            </div>\
+          </div>'
+          )
+        }
+      }
+    </script>
+
+    <!-- 라인업 -->
+    <div class="lineup">
+      <p class="title"><b>쇼박스 라인업</b></p>
+      <p class="subtitle"><b>"재미"와 "완성도"라는 원칙을 바탕으로 매해 높은 완성도의 흥행작들을 선보이며 한국영화 시장을 선도하고 있습니다.</b></p>
+      <div class="movie-list">
+      <div class="movie-list-bar">
+        <ul>
+          <li style="width: 0px;"></li>
+          <li>
+            <img src="images/movie1.png">
+            <div class="caption">
+              <h3>싱크홀</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                사.상.초.유! 도심 속 초대형 재난 발생!
+                서울 입성과 함께 내 집 마련의 꿈을 이룬 가장 
+                동원,이사 첫날부터 프로참견러 만수와 사사건건 
+                부딪힌다.
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp드라마</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie2.png">
+            <div class="caption">
+              <h3>랑종</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                태국 북동부 ‘이산’ 지역 낯선 시골 마을.
+                집 안, 숲, 산, 나무, 논밭까지,
+                이 곳의 사람들은
+                모든 것에 혼이 깃들어 있다고 믿는다.
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp공포, 스릴러, 드라마</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie3.png">
+            <div class="caption">
+              <h3>이태원 클라쓰</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                불합리한 세상 속, 고집과 객기로 뭉친 청춘들의
+                '힙'한 반란이 시작된다. 세계를 압축해 놓은 듯한
+                이태원. 이 작은 거리, 각자의 가치관으로 자유를
+                쫓는 그들의 창업 신화
+              </p>
+              <p class="genre">드라마&nbsp&nbsp|&nbsp&nbsp드라마</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie4.png">
+            <div class="caption">
+              <h3>남산의 부장들</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                1979년 10월 26일, 중앙정보부장 김규평(이병
+                헌)이 대한민국 대통령을 암살한다. 
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp드라마</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie5.jpg">
+            <div class="caption">
+              <h3>압꾸정</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                압구정 황금줄 ‘규옥’(오연서)의 인맥을 한데
+                모아 압구정을 대표하는 성형외과를 넘어, 
+                아시아를 대표 하는 뷰.티.도.시.를 꿈꾸는데..
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp코미디, 드라마</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie6.jpg">
+            <div class="caption">
+              <h3>봉오동 전투</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                일본은 신식 무기로 무장한 월강추격대를 필두로 독립군 토벌 
+                작전을 시작하고, 독립군은 불리한 상황을 이겨내기 위해 
+                봉오동 지형을 활용하기로 한다.
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp액션</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie7.jpg">
+            <div class="caption">
+              <h3>돈</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                오직 부자가 되고 싶은 꿈을 품고 여의도 증권가에 입성한 
+                신입 주식 브로커 조일현(류준열). 빽도 줄도 없는, 수수료 
+                O원의 그는 곧 해고 직전의 처지로 몰린다.
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp범죄</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie8.jpg">
+            <div class="caption">
+              <h3>곤지암</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                1979년 환자 42명의 집단 자살과 병원장의 실종 이후, 
+                섬뜩한 괴담으로 둘러싸인 곤지암 정신병원으로 공포체험을 
+                떠난 7명의 멤버들 원장실, 집단 치료실, 실험실, 열리지 않는 402호… 
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp공포</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie9.jpg">
+            <div class="caption">
+              <h3>꾼</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                ‘희대의 사기꾼’ 장두칠이 돌연 
+                사망했다는 뉴스가 발표된다. 그러나 그가 아직 살아있다는 
+                소문과 함께 그를 비호했던 권력자들이 의도적으로 풀어준 
+                거라는 추측이 나돌기 시작한다.
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp범죄</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/movie10.jpg">
+            <div class="caption">
+              <h3>택시운전사</h3>
+              <div class="icon">+</div>
+              <p class="plot">
+                택시운전사 만섭(송강호)은
+                통금 전에 돌아오면 밀린 월세를 갚을 수 있는 거금 10만원을 
+                준다는 말에 독일기자 피터(토마스 크레취만)를 태우고 영문도 
+                모른 채 길을 나선다. 
+              </p>
+              <p class="genre">영화&nbsp&nbsp|&nbsp&nbsp드라마</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="footer">
+    <img style="width: 100%" src="images/footer_banner.png" alt="footer_banner">
+    <div class="footer-first">
+      <p><b>SINCE 2002<br>
+      한국영화산업의 성장속에 (주)쇼박스가 있습니다.</b></p>
+    </div>
+    <div class="footer-second">
+      <div class="footer-left">
+        <h3>SHOWBOX</h3>
+        <p class="footer-links">
+          <a href="index.html">Home |</a>
+          <a href="sub-first.html">About |</a>
+          <a href="sub-twelve.html">Contact</a>
+        </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <p><span>서울특별시 강남구 도산대로 310 916빌딩 7~9층</span>대표 : 김도수</p>
+          <p><span>사업자등록번호 : 106-81-70629</span>TEL : 02-3218-5500</p>  
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="https://www.facebook.com/Showbox.Movie"><img src="images/facebook.png"></a>
+        <a href="https://www.instagram.com/showbox.movie/"><img src="images/instagram.png"></a>
+        <a href="https://www.youtube.com/channel/UCvvsOdnAQH4fl50DY17eV1A"><img src="images/yutube.png"></a>
+        <a href="https://www.orionworld.com/"><p>FAMILYSITE <b>ORION</b></p></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

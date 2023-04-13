@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sub-fifth</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Single+Day&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/sub-fifth.css">
+  <script>
+    jQuery(document).ready(function(){
+      $('.menu>li').mouseover(function(){
+        $(this).find('.submenu').stop().slideDown(500);
+      }).mouseout(function(){
+        $(this).find('.submenu').stop().slideUp(500);
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div id="main_page">
+    <div id="header">
+      <h1 id="logo">
+        <a href="index.html"><img src="images/logo.jpg" alt="showbox_logo"></a>
+      </h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="sub-first.html">쇼박스 소개</a>
+            <ul class="submenu">
+              <li><a href="sub-first.html">쇼박스 소개</a></li>
+              <li><a href="sub-second.html">사업 영역</a></li>
+              <li><a href="sub-third.html">윤리경영</a></li>
+            </ul>
+          </li>
+          <li><a href="sub-fifth.html">라인업</a>
+            <ul class="submenu">
+              <li><a href="sub-fourth.html">개봉 예정작</a></li>
+              <li><a href="sub-fifth.html">쇼박스 라인업</a></li>
+            </ul>
+          </li>
+          <li><a href="sub-eight.html">IR</a>
+            <ul class="submenu">
+              <li><a href="sub-sixth.html">공시정보</a></li>
+              <li><a href="sub-seventh.html">재무정보</a></li>
+              <li><a href="sub-eight.html">IR뉴스</a></li>
+              <li><a href="sub-ninth.html">관리규정</a></li>
+            </ul>
+          </li>
+          <li><a href="sub-tenth.html">채용정보</a>
+            <ul class="submenu">
+              <li><a href="sub-tenth.html">채용정보</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 배너 -->
+  <div class="banner">
+    <div class="banner-text">
+      <h1>쇼박스 라인업</h1>
+      <h5>SHOWBOX Lineup</h5>
+    </div>
+  </div>
+  <div class ="banner-menu">
+    <div class ="banner-icon1">
+      <img src="images/homeicon.png" id="home-icon" alt="">
+    </div>
+    <div class = "banner-icon2">
+      <h4>라인업</h4>
+      <img src="images/arrowdown.png" id="arrowdown-icon" alt="">
+    </div>
+    <div class = "banner-icon2">
+      <h4>쇼박스 라인업</h4>
+      <img src="images/arrowdown.png" id="arrowdown-icon" alt="">
+    </div>
+  </div>
+
+  <div class="menubar">
+    <button type="button" onclick="location.href='sub-fourth.html'" class="menubar-center">
+      <center>
+        <h3>현재 상영작/개봉 예정작</h3>
+      </center>
+    </button>
+    <button type="button" onclick="location.href='sub-fifth.html'" class="menubar-center-orange">
+      <center>
+        <h3>쇼박스 라인업</h3>
+      </center>
+    </button>
+  </div>
+
+  <!-- 쇼박스 라인업 -->
+  <div id="container">
+    <div class="movie">
+      <p><b>전체 영화</b></p>
+    </div>
+    <table>
+      <tr>
+        <td class="lineup-img">
+          <img src="images/lineup1.jpg">
+          <h3>스즈메의 문단속</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup2.jpg">
+          <h3>시민덕희</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup3.jpg">
+          <h3>피랍</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup4.jpg">
+          <h3>휴가</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup5.jpg">
+          <h3>압꾸정</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img-right">
+          <img src="images/lineup6.jpg">
+          <h3>비상선언</h3>
+          <p>드라마</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="lineup-img">
+          <img src="images/lineup7.jpg">
+          <h3>이상한나라의 수학자</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup8.jpg">
+          <h3>싱크홀</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup9.jpg">
+          <h3>랑종</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup10.jpg">
+          <h3>국제수사</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup11.jpg">
+          <h3>남산의 부장들</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img-right">
+          <img src="images/lineup12.jpg">
+          <h3>퍼펙트맨</h3>
+          <p>드라마</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="lineup-img">
+          <img src="images/lineup13.jpg">
+          <h3>봉오동 전투</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup14.jpg">
+          <h3>마담 싸이코</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup15.jpg">
+          <h3>미성년</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup16.jpg">
+          <h3>돈</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup17.jpg">
+          <h3>뺑반</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img-right">
+          <img src="images/lineup18.jpg">
+          <h3>마약왕</h3>
+          <p>드라마</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="lineup-img">
+          <img src="images/lineup19.jpg">
+          <h3>성난황소</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup20.jpg">
+          <h3>암수살인</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup21.jpg">
+          <h3>곤지암</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup22.jpg">
+          <h3>조선명탐정</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup23.jpg">
+          <h3>꾼</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img-right">
+          <img src="images/lineup24.jpg">
+          <h3>살인자의 기억법</h3>
+          <p>드라마</p>
+        </td>
+      </tr>
+      <tr>  
+        <td class="lineup-img">
+          <img src="images/lineup25.jpg">
+          <h3>희생부활자</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup26.jpg">
+          <h3>택시운전사</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup27.jpg">
+          <h3>특별 시민</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup28.jpg">
+          <h3>프리즌</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup29.jpg">
+          <h3>가려진 시간</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img-right">
+          <img src="images/lineup30.jpg">
+          <h3>럭키</h3>
+          <p>드라마</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="lineup-img">
+          <img src="images/lineup31.jpg">
+          <h3>터널</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup32.jpg">
+          <h3>굿바이 싱글</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup33.jpg">
+          <h3>미안해 사랑해 고마워</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup34.jpg">
+          <h3>검사외전</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img">
+          <img src="images/lineup35.jpg">
+          <h3>내부자들 : 디 오리지널</h3>
+          <p>드라마</p>
+        </td>
+        <td class="lineup-img-right">
+          <img src="images/lineup36.jpg">
+          <h3>그날의 분위기</h3>
+          <p>드라마</p>
+        </td>
+      </tr>
+
+    </table>
+
+    <div class="post-box">
+      <h2 class="post-left-arrow"><</h2>
+      <h2 class="post-selected">1</h2>
+      <h2 class="post-non-selected">2</h2>
+      <h2 class="post-non-selected">3</h2>
+      <h2 class="post-non-selected">4</h2>
+      <h2 class="post-non-selected">></h2>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <img style="width: 100%" src="images/footer_banner.png" alt="footer_banner">
+    <div class="footer-second">
+      <div class="footer-left">
+        <h3>SHOWBOX</h3>
+        <p class="footer-links">
+          <a href="index.html">Home |</a>
+          <a href="sub-first.html">About |</a>
+          <a href="sub-twelve.html">Contact</a>
+        </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <p><span>서울특별시 강남구 도산대로 310 916빌딩 7~9층</span>대표 : 김도수</p>
+          <p><span>사업자등록번호 : 106-81-70629</span>TEL : 02-3218-5500</p>  
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="https://www.facebook.com/Showbox.Movie"><img src="images/facebook.png"></a>
+        <a href="https://www.instagram.com/showbox.movie/"><img src="images/instagram.png"></a>
+        <a href="https://www.youtube.com/channel/UCvvsOdnAQH4fl50DY17eV1A"><img src="images/yutube.png"></a>
+        <a href="https://www.orionworld.com/"><p>FAMILYSITE <b>ORION</b></p></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
